@@ -1,0 +1,13 @@
+{
+  "name": "Rusi En-Den",
+  "short_name": "Rusi En-Den",
+  "description": "Rusi En-Den Teknik & Shtëpi, Durrës",
+  "start_url": "./",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#101114",
+  "background_color": "#101114",
+  "display": "browser"
+}
