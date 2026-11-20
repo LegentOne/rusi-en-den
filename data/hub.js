@@ -1,6 +1,6 @@
 /* Krijuar nga paneli i administrimit (Rusi En-Den Admin) për faqen kryesore. Mos e ndryshoni me dorë. */
 window.RUSI_HUB = {
- "updatedAt": "2026-11-18T21:10:17.711Z",
+ "updatedAt": "2026-11-20T13:34:08.374Z",
  "settings": {
   "whatsappNumber": "355676661101",
   "phoneDisplay": "+355 67 666 1101",
@@ -23,7 +23,9 @@ window.RUSI_HUB = {
   "mapQuery": "Rusi En-Den, Rruga Vllazërimi, Durrës",
   "showPrices": true,
   "currency": "Lekë",
-  "hubUrl": "https://LegentOne.github.io/rusi-en-den/"
+  "hubUrl": "https://LegentOne.github.io/rusi-en-den/",
+  "googleReviewUrl": "",
+  "goatCode": ""
  },
  "hub": {
   "about": "",
@@ -864,7 +866,7 @@ window.RUSI_HUB = {
    "offer": false,
    "isNew": false,
    "unit": "set",
-   "photo": "",
+   "photo": "foto/set-dushi-termostatik-i-zi-mat-mwp0ssmysgy.jpg",
    "icon": "shower",
    "specs": "Përfundimi: I zi mat | Telefoni: 3 funksione | Dalja: Kokë dushi 30 cm"
   },
