@@ -253,6 +253,24 @@ p { margin: 0; }
   .two { grid-template-columns: 1fr; }
 }
 
+/* ---------- phones: both shops on one screen ---------- */
+@media (max-width: 900px) {
+  .split { min-height: calc(100svh - 69px); }
+  .panel { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px; padding: 30px clamp(24px, 6vw, 48px); }
+  .panel .p-text, .panel .p-cats, .panel .p-meta { display: none; }
+  .panel .p-logo { align-self: flex-start; margin: 0 0 2px; }
+  .split-wrap .seam { display: grid; width: 46px; height: 46px; font-size: 11px; }
+}
+@media (max-width: 560px) {
+  .panel { gap: 12px; padding: 26px 24px; }
+  .panel.shtepi { padding-left: 32px; padding-right: 32px; }
+  .panel.shtepi::after { inset: 12px; }
+  .panel .p-logo { height: 38px; }
+  .panel .p-title { font-size: clamp(25px, 7.2vw, 32px); line-height: 1.05; }
+  .panel.shtepi .p-title { font-size: clamp(27px, 7.8vw, 34px); }
+  .panel .p-go { min-height: 46px; padding-top: 0; padding-bottom: 0; }
+}
+@media (max-width: 900px) and (max-height: 640px) { .panel .p-logo { display: none; } }
 /* ---------- open now, reviews ---------- */
 [hidden] { display: none !important; }
 .open-now { display: flex; align-items: center; gap: 7px; margin: 0 0 12px; }
@@ -611,7 +629,8 @@ const icon = (k) => `<svg class="ico" viewBox="0 0 64 64" aria-hidden="true">${I
 
 /* ---------- split panels ---------- */
 function renderSplit() {
-  $("#split").innerHTML = SITES.map(s => {
+  const order = [...SITES].sort((a, b) => (b.key === "home") - (a.key === "home"));   // Shtëpi first
+  $("#split").innerHTML = order.map(s => {
     const theme = s.key === "main" ? "teknik" : s.key === "home" ? "shtepi" : "custom";
     const href = siteHref(s);
     const cats = (s.cats || []).slice(0, 6).map(c => `<li>${esc((isEn() && c.name_en) || c.name)}</li>`).join("");
